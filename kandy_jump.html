@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Kandy Jump</title>
+        <style type="text/css">
+        body
+        {
+            background-color: black;
+        }
+        .centerDiv
+        {
+            width: 770px;
+            height: 80%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .introDiv
+        {
+            width: 450px;
+            float: right;
+        }
+        .splashDiv
+        {
+            float: top;
+            height: 50%;
+        }
+        .rulesDiv
+        {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gameDiv
+        {
+            width: 300px;
+            background-color:white;
+            float: left;
+        }
+        </style>
+        <script src="out/kandy_jump.js"></script>
+    </head>
+    <body onload="initialize()">
+        <img id="player" src="res/player.png" style="display: none;">
+        <img id="flash" src="res/flash.png" style="display: none;">
+        <img id="cloud1" src="res/cloud1.png" style="display: none;">
+        <img id="cloud2" src="res/cloud2.png" style="display: none;">
+        <img id="gumdrop1" src="res/gumdrop1.png" style="display: none;">
+        <img id="gumdrop2" src="res/gumdrop2.png" style="display: none;">
+        <img id="gumdrop3" src="res/gumdrop3.png" style="display: none;">
+        <img id="gumdrop4" src="res/gumdrop4.png" style="display: none;">
+        <img id="gumdrop5" src="res/gumdrop5.png" style="display: none;">
+        <img id="apple" src="res/apple.png" style="display: none;">
+        <div class="centerDiv">
+            <div class="gameDiv">
+                <canvas id="game" width="300" height="500"></canvas>
+            </div>
+            <div class="introDiv">
+                <div class="splashDiv"><img src="img/splashscreen.png"></div>
+                <div class="rulesDiv">
+                    <p>Gumdrops = 1 point!</p>
+                    <p>Apples = -10 points!</p>
+                    <p>Double points when caught in the air!</p>
+                    <p>Move with left and right arrows</p>
+                    <p>Space bar to jump</p>
+                    <p>[N] key for a new game</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
