@@ -44,12 +44,12 @@ class MainGame {
     paint () {
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-		this.worldHeight = canvas.height;
-		this.worldWidth = canvas.width;
-		if (this.player == null) {
-			this.startLevel();
-			return;
-		}
+        this.worldHeight = canvas.height;
+        this.worldWidth = canvas.width;
+        if (this.player == null) {
+            this.startLevel();
+            return;
+        }
         this.layers.forEach((lyr) => {
             lyr.forEach((sprite) => {
                 sprite.draw();
@@ -96,10 +96,10 @@ class MainGame {
         }
     }
     addSprite(s: Sprite, layer_index: number) {
-		this.allSprites.push(s);
-		var layer = this.layers[layer_index];
-		layer.push(s);
-		s.layer = layer;
+        this.allSprites.push(s);
+        var layer = this.layers[layer_index];
+        layer.push(s);
+        s.layer = layer;
     }
     start() {
         this.totalScore = 0;
@@ -120,14 +120,14 @@ class MainGame {
             new Array<Sprite>(),
             new Array<Sprite>()
         ];
-		
+        
         this.player = new Player();
-		this.addSprite(this.player, 2);  // in front of everything
-		
-		var cloud1 = new Cloud(1); cloud1.vx = -(random_int(3) + 1);
-		var cloud2 = new Cloud(2); cloud2.vx = random_int(3) + 1;
-		this.addSprite(cloud1, 1);
-		this.addSprite(cloud2, 1);
+        this.addSprite(this.player, 2);  // in front of everything
+        
+        var cloud1 = new Cloud(1); cloud1.vx = -(random_int(3) + 1);
+        var cloud2 = new Cloud(2); cloud2.vx = random_int(3) + 1;
+        this.addSprite(cloud1, 1);
+        this.addSprite(cloud2, 1);
     }
     cycle() {
         if (this.player) {
