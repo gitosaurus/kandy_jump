@@ -137,8 +137,8 @@ class MainGame {
         var nextSprites = [];
         // The updates inside this loop may add to allSprites,
         // so the choice to continue the loop until the very end of
-        // allSprites.size() is in fact critical; otherwise they
-        // won't make it into next_sprites.
+        // allSprites.length is in fact critical; otherwise they
+        // won't make it into nextSprites.
         // In other words, changing this to forEach will cause a
         // problem.
         if (this.allSprites) {
