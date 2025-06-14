@@ -6,7 +6,7 @@ function text_height(text_box: TextMetrics): number {
     return text_box.actualBoundingBoxAscent + text_box.actualBoundingBoxDescent;
 }
 
-class Rectangle {
+export class Rectangle {
     constructor(
         public left: number,
         public top: number,
@@ -18,7 +18,7 @@ class Rectangle {
 }
 // From:
 // https://stackoverflow.com/questions/2752349/fast-rectangle-to-rectangle-intersection#2752387
-function rectanglesIntersect(r1: Rectangle, r2: Rectangle): boolean {
+export function rectanglesIntersect(r1: Rectangle, r2: Rectangle): boolean {
     return !(r2.left > r1.right || 
              r2.right < r1.left || 
              r2.top > r1.bottom ||
