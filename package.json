@@ -1,0 +1,11 @@
+{
+  "name": "kandy_jump",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node out/tests/rectangle.test.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
