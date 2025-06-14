@@ -148,9 +148,16 @@ class MainGame {
                     s.update();
                     nextSprites.push(s);
                 } else {
-                    // Seems like a complicated way to manage remove(s), but I
-                    // couldn't find anything simpler.
-                    s.layer = s.layer.filter((x: Sprite) => { return x != s; });
+                    // Remove sprite from its render layer. The previous
+                    // implementation replaced the layer array reference, which
+                    // left the old array (still referenced by mainGame.layers)
+                    // untouched. This caused layers to grow with inactive
+                    // sprites. Splicing ensures the shared layer array is
+                    // mutated in place.
+                    const idx = s.layer.indexOf(s);
+                    if (idx !== -1) {
+                        s.layer.splice(idx, 1);
+                    }
                 }
             }
         }
