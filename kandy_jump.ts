@@ -213,7 +213,7 @@ class Sprite {
         } else if (this.x < 0) {
             this.x = mainGame.worldWidth;
         }
-        // where the player wants to check for collision
+        // where the player wants to check for collisions
         if (this.gravity > 0) {
             if (this.y > ground) {
                 this.inAir();
